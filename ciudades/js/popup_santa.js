@@ -2,7 +2,7 @@ var OpenPopUp = document.getElementById("open-popup"),
     overlay = document.getElementById("overlay"),
     popup = document.getElementById("popup"),
     closePopup = document.getElementById("close-popup");
-var requestURL = 'https://requebernardo.github.io/tecnologia-web/asignaciones/asignacion_9/ciudades/JOSN/tiwanaku.json';
+var requestURL = 'https://magne754.github.io/proyecto/ciudades/JOSN/santa_cruz.json';
 var request = new XMLHttpRequest();
 var information = document.querySelector('section');;
 request.open('GET', requestURL);
@@ -23,34 +23,36 @@ function showplace(jsonObj,a) {
         myH1.textContent = lugares[i].city;
         myH2.textContent =  lugares[i].place;
         myPara.textContent = lugares[i].description;
-        }
 
         myArticle.appendChild(myH1);
         myArticle.appendChild(myH2);
         myArticle.appendChild(myPara);
 
         information.appendChild(myArticle);
+        }
+
+        
     }
 }
-open-popupu.addEventListener('click', function(){
+openpopupu.addEventListener('click', function(){
     var lugar = request.response;
     request.onload = lugar;
     overlay.classList.add('active');
     showplace(lugar, 'Lomas de Arena');
 });
-open-popupd.addEventListener('click', function(){
+openpopupd.addEventListener('click', function(){
     var lugar = request.response;
     request.onload = lugar;
     overlay.classList.add('active');
     showplace(lugar, 'cabañas del Rio pirai');
 });
-open-popupt.addEventListener('click', function(){
+openpopupt.addEventListener('click', function(){
     var lugar = request.response;
     request.onload = lugar;
     overlay.classList.add('active');
     showplace(lugar, 'Cotoca');
 });
-open-popupc.addEventListener('click', function(){
+openpopupc.addEventListener('click', function(){
     var lugar = request.response;
     request.onload = lugar;
     overlay.classList.add('active');
